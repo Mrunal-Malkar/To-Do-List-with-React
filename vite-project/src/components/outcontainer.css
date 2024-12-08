@@ -1,0 +1,30 @@
+#inputoftodo{
+    width:40rem;
+    height:2.5rem;
+    font-size:larger;
+    margin-right:1rem;
+}
+
+.taskcontainer{
+    min-height: 30rem;
+}
+
+.outermostcontainer{
+    max-width:50vw;
+}
+
+@media screen and (min-width:0px) and (max-width:770px){
+
+    #inputoftodo{
+        width:80%;
+        height:2.5rem;
+        font-size:larger;
+    }
+
+    
+    .outermostcontainer{
+    max-width:99vw;
+    }
+
+
+}
