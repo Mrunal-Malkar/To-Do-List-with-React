@@ -29,10 +29,10 @@ const Outcontainer = () => {
     inputtag.current.value=para.innerText;
     }
 
-    const handleDelete=(e) => {
-        const taskId = parseInt(e.target.id);
-        setTasksList((previousTasks) => previousTasks.filter(task => task.id !== taskId));
+    const handleDelete=(id) => {
+        setTasksList((previousTasks) => previousTasks.filter(task => task.id !== id));
     };
+
     const toggle = (e) => {
         const parentholder = e.target.parentElement;
         if (parentholder.style.textDecoration !== "line-through") {
@@ -83,7 +83,7 @@ const Outcontainer = () => {
                                     <p ref={paratask} className='text-xl w-11/12 para'>{tasks.p}</p>
                                     <div className='flex'>
                                         <button ref={editicon} id={tasks.id} onClick={handleEdit}><i  className="fa-regular fa-pen-to-square m-1 ms-2"></i></button>
-                                        <button  ref={deleteicon} id={tasks.id} onClick={handleDelete}><i className="fa-solid fa-trash m-1"></i></button>
+                                        <button  ref={deleteicon} id={tasks.id} onClick={()=>handleDelete(tasks.id)}><i className="fa-solid fa-trash m-1"></i></button>
                                     </div>
                                 </div>))}
 
